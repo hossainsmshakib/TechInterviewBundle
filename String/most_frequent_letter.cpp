@@ -7,11 +7,10 @@ int main() {
     cout<<"Input a string: ";
     getline(cin, str);
     char maxRepeatedChar;
-    int count = 0, maxCount = 0;
-
+    int maxCount = 0;
     transform(str.begin(), str.end(), str.begin(), ::tolower);   
     for(int i=0; i<str.length(); i++) {
-        count = 0;
+        int count = 0;
         for(int j=0; j<str.length(); j++) {
             if (str[i] == str[j]) {
                 count++;
